@@ -57,9 +57,33 @@ include CMakeFiles/STATES_LIB.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/STATES_LIB.dir/flags.make
 
+CMakeFiles/STATES_LIB.dir/lib/espl_lib.c.o: CMakeFiles/STATES_LIB.dir/flags.make
+CMakeFiles/STATES_LIB.dir/lib/espl_lib.c.o: ../lib/espl_lib.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/peterliu/Documents/German/TUM docs/embedded/E1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/STATES_LIB.dir/lib/espl_lib.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/STATES_LIB.dir/lib/espl_lib.c.o   -c "/home/peterliu/Documents/German/TUM docs/embedded/E1/lib/espl_lib.c"
+
+CMakeFiles/STATES_LIB.dir/lib/espl_lib.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/STATES_LIB.dir/lib/espl_lib.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/peterliu/Documents/German/TUM docs/embedded/E1/lib/espl_lib.c" > CMakeFiles/STATES_LIB.dir/lib/espl_lib.c.i
+
+CMakeFiles/STATES_LIB.dir/lib/espl_lib.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/STATES_LIB.dir/lib/espl_lib.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/peterliu/Documents/German/TUM docs/embedded/E1/lib/espl_lib.c" -o CMakeFiles/STATES_LIB.dir/lib/espl_lib.c.s
+
+CMakeFiles/STATES_LIB.dir/lib/espl_lib.c.o.requires:
+
+.PHONY : CMakeFiles/STATES_LIB.dir/lib/espl_lib.c.o.requires
+
+CMakeFiles/STATES_LIB.dir/lib/espl_lib.c.o.provides: CMakeFiles/STATES_LIB.dir/lib/espl_lib.c.o.requires
+	$(MAKE) -f CMakeFiles/STATES_LIB.dir/build.make CMakeFiles/STATES_LIB.dir/lib/espl_lib.c.o.provides.build
+.PHONY : CMakeFiles/STATES_LIB.dir/lib/espl_lib.c.o.provides
+
+CMakeFiles/STATES_LIB.dir/lib/espl_lib.c.o.provides.build: CMakeFiles/STATES_LIB.dir/lib/espl_lib.c.o
+
+
 CMakeFiles/STATES_LIB.dir/lib/states.c.o: CMakeFiles/STATES_LIB.dir/flags.make
 CMakeFiles/STATES_LIB.dir/lib/states.c.o: ../lib/states.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/peterliu/Documents/German/TUM docs/embedded/E1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/STATES_LIB.dir/lib/states.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/peterliu/Documents/German/TUM docs/embedded/E1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/STATES_LIB.dir/lib/states.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/STATES_LIB.dir/lib/states.c.o   -c "/home/peterliu/Documents/German/TUM docs/embedded/E1/lib/states.c"
 
 CMakeFiles/STATES_LIB.dir/lib/states.c.i: cmake_force
@@ -83,15 +107,17 @@ CMakeFiles/STATES_LIB.dir/lib/states.c.o.provides.build: CMakeFiles/STATES_LIB.d
 
 # Object files for target STATES_LIB
 STATES_LIB_OBJECTS = \
+"CMakeFiles/STATES_LIB.dir/lib/espl_lib.c.o" \
 "CMakeFiles/STATES_LIB.dir/lib/states.c.o"
 
 # External object files for target STATES_LIB
 STATES_LIB_EXTERNAL_OBJECTS =
 
+libSTATES_LIB.a: CMakeFiles/STATES_LIB.dir/lib/espl_lib.c.o
 libSTATES_LIB.a: CMakeFiles/STATES_LIB.dir/lib/states.c.o
 libSTATES_LIB.a: CMakeFiles/STATES_LIB.dir/build.make
 libSTATES_LIB.a: CMakeFiles/STATES_LIB.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/peterliu/Documents/German/TUM docs/embedded/E1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libSTATES_LIB.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/peterliu/Documents/German/TUM docs/embedded/E1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking C static library libSTATES_LIB.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/STATES_LIB.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/STATES_LIB.dir/link.txt --verbose=$(VERBOSE)
 
@@ -100,6 +126,7 @@ CMakeFiles/STATES_LIB.dir/build: libSTATES_LIB.a
 
 .PHONY : CMakeFiles/STATES_LIB.dir/build
 
+CMakeFiles/STATES_LIB.dir/requires: CMakeFiles/STATES_LIB.dir/lib/espl_lib.c.o.requires
 CMakeFiles/STATES_LIB.dir/requires: CMakeFiles/STATES_LIB.dir/lib/states.c.o.requires
 
 .PHONY : CMakeFiles/STATES_LIB.dir/requires

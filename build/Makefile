@@ -111,17 +111,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named STATES_LIB
+# Target rules for targets named foo
 
 # Build rule for target.
-STATES_LIB: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 STATES_LIB
-.PHONY : STATES_LIB
+foo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 foo
+.PHONY : foo
 
 # fast build rule for target.
-STATES_LIB/fast:
-	$(MAKE) -f CMakeFiles/STATES_LIB.dir/build.make CMakeFiles/STATES_LIB.dir/build
-.PHONY : STATES_LIB/fast
+foo/fast:
+	$(MAKE) -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/build
+.PHONY : foo/fast
+
+#=============================================================================
+# Target rules for targets named ESPL_LIB
+
+# Build rule for target.
+ESPL_LIB: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ESPL_LIB
+.PHONY : ESPL_LIB
+
+# fast build rule for target.
+ESPL_LIB/fast:
+	$(MAKE) -f CMakeFiles/ESPL_LIB.dir/build.make CMakeFiles/ESPL_LIB.dir/build
+.PHONY : ESPL_LIB/fast
 
 #=============================================================================
 # Target rules for targets named state_machine
@@ -135,6 +148,49 @@ state_machine: cmake_check_build_system
 state_machine/fast:
 	$(MAKE) -f CMakeFiles/state_machine.dir/build.make CMakeFiles/state_machine.dir/build
 .PHONY : state_machine/fast
+
+#=============================================================================
+# Target rules for targets named STATES_LIB
+
+# Build rule for target.
+STATES_LIB: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 STATES_LIB
+.PHONY : STATES_LIB
+
+# fast build rule for target.
+STATES_LIB/fast:
+	$(MAKE) -f CMakeFiles/STATES_LIB.dir/build.make CMakeFiles/STATES_LIB.dir/build
+.PHONY : STATES_LIB/fast
+
+lib/espl_lib.o: lib/espl_lib.c.o
+
+.PHONY : lib/espl_lib.o
+
+# target to build an object file
+lib/espl_lib.c.o:
+	$(MAKE) -f CMakeFiles/ESPL_LIB.dir/build.make CMakeFiles/ESPL_LIB.dir/lib/espl_lib.c.o
+	$(MAKE) -f CMakeFiles/STATES_LIB.dir/build.make CMakeFiles/STATES_LIB.dir/lib/espl_lib.c.o
+.PHONY : lib/espl_lib.c.o
+
+lib/espl_lib.i: lib/espl_lib.c.i
+
+.PHONY : lib/espl_lib.i
+
+# target to preprocess a source file
+lib/espl_lib.c.i:
+	$(MAKE) -f CMakeFiles/ESPL_LIB.dir/build.make CMakeFiles/ESPL_LIB.dir/lib/espl_lib.c.i
+	$(MAKE) -f CMakeFiles/STATES_LIB.dir/build.make CMakeFiles/STATES_LIB.dir/lib/espl_lib.c.i
+.PHONY : lib/espl_lib.c.i
+
+lib/espl_lib.s: lib/espl_lib.c.s
+
+.PHONY : lib/espl_lib.s
+
+# target to generate assembly for a file
+lib/espl_lib.c.s:
+	$(MAKE) -f CMakeFiles/ESPL_LIB.dir/build.make CMakeFiles/ESPL_LIB.dir/lib/espl_lib.c.s
+	$(MAKE) -f CMakeFiles/STATES_LIB.dir/build.make CMakeFiles/STATES_LIB.dir/lib/espl_lib.c.s
+.PHONY : lib/espl_lib.c.s
 
 lib/states.o: lib/states.c.o
 
@@ -162,6 +218,33 @@ lib/states.s: lib/states.c.s
 lib/states.c.s:
 	$(MAKE) -f CMakeFiles/STATES_LIB.dir/build.make CMakeFiles/STATES_LIB.dir/lib/states.c.s
 .PHONY : lib/states.c.s
+
+src/Hello.o: src/Hello.c.o
+
+.PHONY : src/Hello.o
+
+# target to build an object file
+src/Hello.c.o:
+	$(MAKE) -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/src/Hello.c.o
+.PHONY : src/Hello.c.o
+
+src/Hello.i: src/Hello.c.i
+
+.PHONY : src/Hello.i
+
+# target to preprocess a source file
+src/Hello.c.i:
+	$(MAKE) -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/src/Hello.c.i
+.PHONY : src/Hello.c.i
+
+src/Hello.s: src/Hello.c.s
+
+.PHONY : src/Hello.s
+
+# target to generate assembly for a file
+src/Hello.c.s:
+	$(MAKE) -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/src/Hello.c.s
+.PHONY : src/Hello.c.s
 
 src/main.o: src/main.c.o
 
@@ -225,11 +308,19 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... STATES_LIB"
+	@echo "... foo"
+	@echo "... ESPL_LIB"
 	@echo "... state_machine"
+	@echo "... STATES_LIB"
+	@echo "... lib/espl_lib.o"
+	@echo "... lib/espl_lib.i"
+	@echo "... lib/espl_lib.s"
 	@echo "... lib/states.o"
 	@echo "... lib/states.i"
 	@echo "... lib/states.s"
+	@echo "... src/Hello.o"
+	@echo "... src/Hello.i"
+	@echo "... src/Hello.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

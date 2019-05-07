@@ -114,7 +114,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=POSIX_state_machine
+CMAKE_PROJECT_NAME:STATIC=git_tutorial
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -176,6 +176,12 @@ POSIX_state_machine_SOURCE_DIR:STATIC=/home/peterliu/Documents/German/TUM docs/e
 
 //Dependencies for target
 STATES_LIB_LIB_DEPENDS:STATIC=
+
+//Value Computed by CMake
+exercise_1_2_BINARY_DIR:STATIC=/home/peterliu/Documents/German/TUM docs/embedded/E1/build
+
+//Value Computed by CMake
+exercise_1_2_SOURCE_DIR:STATIC=/home/peterliu/Documents/German/TUM docs/embedded/E1
 
 //Value Computed by CMake
 git_tutorial_BINARY_DIR:STATIC=/home/peterliu/Documents/German/TUM docs/embedded/E1/build

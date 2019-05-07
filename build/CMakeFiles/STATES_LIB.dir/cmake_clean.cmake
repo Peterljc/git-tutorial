@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/STATES_LIB.dir/lib/espl_lib.c.o"
   "CMakeFiles/STATES_LIB.dir/lib/states.c.o"
   "libSTATES_LIB.pdb"
   "libSTATES_LIB.a"
