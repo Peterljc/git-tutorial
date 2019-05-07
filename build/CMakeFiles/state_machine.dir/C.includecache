@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/main.h
+
+../include/my_states.h
+
+../lib/states.h
+
+/home/peterliu/Documents/German/TUM docs/embedded/E1/src/main.c
+argp.h
+-
+errno.h
+-
+pthread.h
+-
+signal.h
+-
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+main.h
+/home/peterliu/Documents/German/TUM docs/embedded/E1/src/main.h
+my_states.h
+/home/peterliu/Documents/German/TUM docs/embedded/E1/src/my_states.h
+states.h
+/home/peterliu/Documents/German/TUM docs/embedded/E1/src/states.h
+
+/home/peterliu/Documents/German/TUM docs/embedded/E1/src/my_states.c
+stdio.h
+-
+stdlib.h
+-
+my_states.h
+/home/peterliu/Documents/German/TUM docs/embedded/E1/src/my_states.h
+states.h
+/home/peterliu/Documents/German/TUM docs/embedded/E1/src/states.h
+
