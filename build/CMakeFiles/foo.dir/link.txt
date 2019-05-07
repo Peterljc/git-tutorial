@@ -1,1 +1,0 @@
-/usr/bin/cc  -g   CMakeFiles/foo.dir/src/Hello.c.o  -o ../bin/foo libESPL_LIB.a 
